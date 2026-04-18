@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rohan Malve — Backend-Focused Full-Stack Developer. Building production-ready systems with Python, Django, PostgreSQL, React, and more." />
+  <title>Rohan Malve — Backend-Focused Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     BACKGROUND ELEMENTS
+============================================================ -->
+<div class="bg-grid" aria-hidden="true">
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div> 
+</div>
+
+<!-- ============================================================
+     MOBILE NAV
+============================================================ -->
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+  <span class="mobile-nav-close" id="mobileClose" aria-label="Close menu">✕</span>
+  <a href="#about"      onclick="closeMobile()">About</a>
+  <a href="#projects"   onclick="closeMobile()">Projects</a>
+  <a href="#skills"     onclick="closeMobile()">Skills</a>
+  <a href="#production" onclick="closeMobile()">Reality</a>
+  <a href="#learning"   onclick="closeMobile()">Growth</a>
+  <a href="#contact"    onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+<nav id="mainNav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="Rohan Malve home">
+      <span class="logo-bracket">{</span> RM <span class="logo-bracket">}</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#production">Reality</a></li>
+      <li><a href="#learning">Growth</a></li>
+      <li><a href="#contact" class="nav-cta">Contact ↗</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="hero" aria-label="Hero section">
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Left: Copy -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          Available for full-time roles
+        </div>
+
+        <h1 class="hero-title">
+          <span class="name">Rohan Malve</span>
+          <span class="role">Backend-Focused<br>Full-Stack Developer</span>
+        </h1>
+
+        <p class="hero-tagline">
+          I design and ship <strong>production-ready backend systems</strong> — real infrastructure, real scale, real tradeoffs.
+        </p>
+
+        <p class="hero-statement">
+          // Not chasing trends. Focused on depth, architecture, and systems that work in prod.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary" id="hero-cta-projects">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            View Projects
+          </a>
+          <a href="#contact" class="btn btn-ghost" id="hero-cta-contact">
+            Get in Touch ↗
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">4+</div>
+            <div class="stat-label">Production Projects</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Technologies</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Live Deployed App</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Things Debugged</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Terminal -->
+      <div class="hero-terminal reveal reveal-delay-2">
+        <div class="terminal-window" role="img" aria-label="Terminal showcasing Rohan's profile">
+          <div class="terminal-bar">
+            <div class="terminal-dots">
+              <div class="terminal-dot dot-red"></div>
+              <div class="terminal-dot dot-amber"></div>
+              <div class="terminal-dot dot-green"></div>
+            </div>
+            <span class="terminal-title">rohan@system:~$</span>
+          </div>
+          <div class="terminal-body">
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">&nbsp;cat developer.json</span></div>
+            <div class="t-line"><span class="t-out"><span class="t-key">"name"</span>: <span class="t-val">"Rohan Malve"</span>,</span></div>
+            <div class="t-line"><span class="t-out"><span class="t-key">"role"</span>: <span class="t-val">"Backend Full-Stack"</span>,</span></div>
+            <div class="t-line"><span class="t-out"><span class="t-key">"stack"</span>: [<span class="t-val">"Django"</span>, <span class="t-val">"PostgreSQL"</span>,</span></div>
+            <div class="t-line"><span class="t-out">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-val">"Redis"</span>, <span class="t-val">"React"</span>, <span class="t-val">"Next.js"</span>],</span></div>
+            <div class="t-line"><span class="t-out"><span class="t-key">"deployed"</span>: <span class="t-val">true</span>,</span></div>
+            <div class="t-line"><span class="t-out"><span class="t-key">"status"</span>: <span class="t-success">"prod-ready"</span></span></div>
+            <br/>
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">&nbsp;python manage.py check</span></div>
+            <div class="t-line"><span class="t-success">&nbsp;✓ System check identified no issues.</span></div>
+            <br/>
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">&nbsp;gunicorn app:create_app()</span></div>
+            <div class="t-line"><span class="t-success">&nbsp;[INFO] Listening at: 0.0.0.0:5000</span></div>
+            <div class="t-line"><span class="t-success">&nbsp;[INFO] Workers: 4 booted. 🔥</span></div>
+            <br/>
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-cursor"></span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ============================================================
+     ABOUT / MINDSET
+============================================================ -->
+<section id="about" class="section" aria-label="About section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Identity</span>
+      <h2 class="section-title">I don't build demos.<br><span>I build systems.</span></h2>
+      <p class="section-subtitle">
+        My code survives real production. Gunicorn crashes, OAuth callback loops, database connection limits — I've been there and fixed it. Every project is a real engineering exercise.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="mindset-card glass reveal reveal-delay-1">
+        <div class="mindset-icon" style="background: rgba(139,92,246,0.12);">⚙️</div>
+        <h3>Engineering First</h3>
+        <p>
+          I approach every project from the backend — thinking about data flows, async tasks, and how things fail before I think about how they look. Clean architecture isn't a preference, it's a baseline.
+        </p>
+      </div>
+
+      <div class="mindset-card glass reveal reveal-delay-2">
+        <div class="mindset-icon" style="background: rgba(59,130,246,0.12);">🔍</div>
+        <h3>I Learn by Debugging</h3>
+        <p>
+          When something breaks in production, I read logs, trace root causes, and document what I learn. Debugging real-world failures has taught me more than any tutorial ever could.
+        </p>
+      </div>
+
+      <div class="about-beliefs glass reveal reveal-delay-3">
+        <div class="belief-item">
+          <div class="belief-icon" style="background: rgba(139,92,246,0.12);">🏗️</div>
+          <div class="belief-text">
+            <strong>Architecture over features</strong>
+            <span>A well-structured system is easier to extend than a pile of features.</span>
+          </div>
+        </div>
+        <div class="belief-item">
+          <div class="belief-icon" style="background: rgba(34,211,238,0.10);">⚡</div>
+          <div class="belief-text">
+            <strong>Async by default</strong>
+            <span>Celery + Redis for long-running tasks. Don't block the request cycle.</span>
+          </div>
+        </div>
+        <div class="belief-item">
+          <div class="belief-icon" style="background: rgba(74,222,128,0.10);">🛡️</div>
+          <div class="belief-text">
+            <strong>Security is not optional</strong>
+            <span>JWT, OAuth scopes, role-based access — baked in from day one.</span>
+          </div>
+        </div>
+        <div class="belief-item">
+          <div class="belief-icon" style="background: rgba(251,113,133,0.10);">📈</div>
+          <div class="belief-text">
+            <strong>Depth over breadth</strong>
+            <span>Master the stack you have before jumping to the next shiny thing.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mindset-card glass reveal reveal-delay-4">
+        <div class="mindset-icon" style="background: rgba(74,222,128,0.10);">🚀</div>
+        <h3>Ships to Production</h3>
+        <p>
+          Deploying on Render with Gunicorn, configuring PostgreSQL connection pools, wiring Stripe webhooks live — I know what it takes to go from <span class="hl-purple">localhost</span> to <span class="hl-green">production</span>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ============================================================
+     PROJECTS
+============================================================ -->
+<section id="projects" class="section" aria-label="Projects section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Proof of Work</span>
+      <h2 class="section-title">Projects built for<br><span>the real world</span></h2>
+      <p class="section-subtitle">
+        Not side projects. Not tutorials repackaged. Systems designed with real requirements, real tradeoffs, and real deployments.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- FEATURED: Flask E-Commerce -->
+      <div class="project-card glass featured reveal">
+        <div class="featured-accent"></div>
+        <div class="project-card-inner">
+          <div class="project-header">
+            <div>
+              <span class="project-badge badge-live">Live Deployed</span>
+            </div>
+            <span class="project-number">// 01</span>
+          </div>
+
+          <h3 class="project-title">Flask E-Commerce Platform</h3>
+          <p class="project-problem">
+            ⚠ Problem: Build a secure, payment-enabled e-commerce platform that works beyond localhost.
+          </p>
+          <p class="project-desc">
+            A fully deployed, production-grade e-commerce application built with modular Flask architecture. Handles real users, real payments, and real authentication — deployed on Render with Gunicorn orchestrating multiple workers. Overcame production-specific issues including Gunicorn configuration, PostgreSQL connection pooling, environment variable management, and Stripe webhook verification.
+          </p>
+
+          <div class="project-features">
+            <span class="feature-item">Google OAuth 2.0 authentication</span>
+            <span class="feature-item">Stripe payment integration</span>
+            <span class="feature-item">Cart, wishlist &amp; order management</span>
+            <span class="feature-item">PostgreSQL + Redis data layer</span>
+            <span class="feature-item">Gunicorn multi-worker deployment</span>
+            <span class="feature-item">Modular Blueprint architecture</span>
+            <span class="feature-item">Session management &amp; security</span>
+            <span class="feature-item">Production env configuration</span>
+          </div>
+
+          <div class="project-stack">
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">Redis</span>
+            <span class="tech-badge">Stripe API</span>
+            <span class="tech-badge">Google OAuth</span>
+            <span class="tech-badge">Gunicorn</span>
+            <span class="tech-badge">Render</span>
+            <span class="tech-badge">SQLAlchemy</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://render.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="proj1-live">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live App
+            </a>
+            <a href="https://github.com/rohanmalve" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="proj1-github">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.990.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub Projects Grid -->
+      <div class="projects-sub-grid">
+
+        <div class="project-card glass reveal reveal-delay-1">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-badge badge-wip">Full Stack</span>
+              <span class="project-number">// 02</span>
+            </div>
+            <h3 class="project-title">Hotel Management System</h3>
+            <p class="project-problem">
+              ⚠ Problem: Multi-role hotel operations — staff vs. guests vs. admin — with real booking logic.
+            </p>
+            <p class="project-desc">
+              Enterprise-grade hotel management system with a Django REST Framework API backend and a Next.js + React frontend. Implements JWT auth, role-based access control, and complex booking workflows with admin dashboards.
+            </p>
+            <div class="project-features">
+              <span class="feature-item">JWT authentication</span>
+              <span class="feature-item">Role-based access control</span>
+              <span class="feature-item">Booking engine &amp; workflows</span>
+              <span class="feature-item">Admin reporting dashboards</span>
+            </div>
+            <div class="project-stack">
+              <span class="tech-badge">Django REST</span>
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Next.js</span>
+              <span class="tech-badge">JWT</span>
+              <span class="tech-badge">PostgreSQL</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/rohanmalve" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="proj2-github">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.990.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal reveal-delay-2">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-badge badge-wip">Backend Heavy</span>
+              <span class="project-number">// 03</span>
+            </div>
+            <h3 class="project-title">Django Expense Tracker</h3>
+            <p class="project-problem">
+              ⚠ Problem: Handle async background tasks without blocking the main thread.
+            </p>
+            <p class="project-desc">
+              A backend-heavy expense management system built to explore Celery + Redis for asynchronous workflows. Reports, aggregations, and notifications are decoupled from the request lifecycle.
+            </p>
+            <div class="project-features">
+              <span class="feature-item">Celery async task queue</span>
+              <span class="feature-item">Redis message broker</span>
+              <span class="feature-item">Automated reporting</span>
+              <span class="feature-item">Django ORM data layer</span>
+            </div>
+            <div class="project-stack">
+              <span class="tech-badge">Django</span>
+              <span class="tech-badge">Celery</span>
+              <span class="tech-badge">Redis</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">Python</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/rohanmalve" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="proj3-github">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.990.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal reveal-delay-3" style="grid-column: 1 / -1;">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-badge badge-wip">Next.js + TypeScript</span>
+              <span class="project-number">// 04</span>
+            </div>
+            <h3 class="project-title">Customer-Facing Hotel Website</h3>
+            <p class="project-problem">
+              ⚠ Problem: Deliver a fast, type-safe frontend that integrates cleanly with a DRF backend.
+            </p>
+            <p class="project-desc">
+              A fully typed Next.js frontend connected to a Django REST Framework backend. Implements SSR for SEO, Axios for API calls, and React Query for server state.
+            </p>
+            <div class="project-stack">
+              <span class="tech-badge">Next.js</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">React Query</span>
+              <span class="tech-badge">Axios</span>
+              <span class="tech-badge">DRF Backend</span>
+              <span class="tech-badge">TailwindCSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/rohanmalve" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="proj4-github">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.990.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /projects-sub-grid -->
+    </div><!-- /projects-grid -->
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ============================================================
+     SKILLS
+============================================================ -->
+<section id="skills" class="section" aria-label="Skills section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Stack</span>
+      <h2 class="section-title">Tools I've used<br><span>under production pressure</span></h2>
+      <p class="section-subtitle">
+        Not a list of things I've watched tutorials on. These are technologies I've debugged, deployed, and shipped.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-group glass reveal reveal-delay-1">
+        <div class="skill-group-label" style="color: var(--purple-400);">
+          <div class="dot" style="background: var(--purple-400);"></div>
+          Backend
+        </div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-name">Python / Django</span><div class="skill-bar-track"><div class="skill-bar-fill fill-purple" data-width="92"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Django REST Framework</span><div class="skill-bar-track"><div class="skill-bar-fill fill-purple" data-width="88"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Flask</span><div class="skill-bar-track"><div class="skill-bar-fill fill-purple" data-width="85"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Celery + Redis</span><div class="skill-bar-track"><div class="skill-bar-fill fill-purple" data-width="78"></div></div></div>
+          <div class="skill-item"><span class="skill-name">REST API Design</span><div class="skill-bar-track"><div class="skill-bar-fill fill-purple" data-width="87"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skill-group glass reveal reveal-delay-2">
+        <div class="skill-group-label" style="color: var(--blue-400);">
+          <div class="dot" style="background: var(--blue-400);"></div>
+          Frontend
+        </div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-name">React</span><div class="skill-bar-track"><div class="skill-bar-fill fill-blue" data-width="82"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Next.js</span><div class="skill-bar-track"><div class="skill-bar-fill fill-blue" data-width="76"></div></div></div>
+          <div class="skill-item"><span class="skill-name">TypeScript</span><div class="skill-bar-track"><div class="skill-bar-fill fill-blue" data-width="72"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Redux / React Query</span><div class="skill-bar-track"><div class="skill-bar-fill fill-blue" data-width="75"></div></div></div>
+          <div class="skill-item"><span class="skill-name">TailwindCSS</span><div class="skill-bar-track"><div class="skill-bar-fill fill-blue" data-width="80"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skill-group glass reveal reveal-delay-3">
+        <div class="skill-group-label" style="color: var(--green-400);">
+          <div class="dot" style="background: var(--green-400);"></div>
+          Database
+        </div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-name">PostgreSQL</span><div class="skill-bar-track"><div class="skill-bar-fill fill-green" data-width="85"></div></div></div>
+          <div class="skill-item"><span class="skill-name">SQLAlchemy / ORM</span><div class="skill-bar-track"><div class="skill-bar-fill fill-green" data-width="80"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Redis</span><div class="skill-bar-track"><div class="skill-bar-fill fill-green" data-width="75"></div></div></div>
+          <div class="skill-item"><span class="skill-name">SQL (Queries &amp; Design)</span><div class="skill-bar-track"><div class="skill-bar-fill fill-green" data-width="78"></div></div></div>
+          <div class="skill-item"><span class="skill-name">DB Indexing &amp; Optimization</span><div class="skill-bar-track"><div class="skill-bar-fill fill-green" data-width="65"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skill-group glass reveal reveal-delay-4">
+        <div class="skill-group-label" style="color: #f97316;">
+          <div class="dot" style="background: #f97316;"></div>
+          Tools &amp; Infra
+        </div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-name">Git / GitHub</span><div class="skill-bar-track"><div class="skill-bar-fill fill-orange" data-width="90"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Docker</span><div class="skill-bar-track"><div class="skill-bar-fill fill-orange" data-width="70"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Render (Deployment)</span><div class="skill-bar-track"><div class="skill-bar-fill fill-orange" data-width="82"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Gunicorn / WSGI</span><div class="skill-bar-track"><div class="skill-bar-fill fill-orange" data-width="78"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Stripe API</span><div class="skill-bar-track"><div class="skill-bar-fill fill-orange" data-width="72"></div></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ============================================================
+     PRODUCTION REALITY
+============================================================ -->
+<section id="production" class="section" aria-label="Production reality section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Production Reality</span>
+      <h2 class="section-title">Real bugs.<br><span>Real fixes. Real learning.</span></h2>
+      <p class="section-subtitle">
+        Every serious engineer has a war room story. Here are mine. These aren't excuses — they're evidence that I've shipped real systems and survived.
+      </p>
+    </div>
+
+    <div class="reality-grid">
+
+      <div class="reality-card glass reveal reveal-delay-1">
+        <div class="reality-card-header">
+          <span class="reality-icon">💥</span>
+          <div>
+            <h3>Gunicorn Worker Crash on Startup</h3>
+            <span class="reality-error">Worker failed to boot</span>
+          </div>
+        </div>
+        <div class="reality-arrow"><span>→ Root Cause</span></div>
+        <p class="reality-solution">The app factory pattern wasn't being called correctly. Gunicorn needs <code>app:create_app()</code> — not just <code>app:app</code>. <strong>Fixed by restructuring the entrypoint and documenting the correct Procfile syntax.</strong></p>
+      </div>
+
+      <div class="reality-card glass reveal reveal-delay-2">
+        <div class="reality-card-header">
+          <span class="reality-icon">🔐</span>
+          <div>
+            <h3>Google OAuth Callback Mismatch</h3>
+            <span class="reality-error">redirect_uri_mismatch</span>
+          </div>
+        </div>
+        <div class="reality-arrow"><span>→ Root Cause</span></div>
+        <p class="reality-solution">Google rejects OAuth requests when the redirect URI doesn't exactly match — including trailing slashes. <strong>Fixed by auditing all registered URIs in Google Cloud Console and enforcing consistent URL construction in Flask.</strong></p>
+      </div>
+
+      <div class="reality-card glass reveal reveal-delay-1">
+        <div class="reality-card-header">
+          <span class="reality-icon">🗄️</span>
+          <div>
+            <h3>PostgreSQL Connection Pool Exhaustion</h3>
+            <span class="reality-error">FATAL: too many connections</span>
+          </div>
+        </div>
+        <div class="reality-arrow"><span>→ Root Cause</span></div>
+        <p class="reality-solution">Each Gunicorn worker was opening its own connection pool without limits. <strong>Fixed by configuring SQLAlchemy pool_size and max_overflow, and switching to a DATABASE_URL with connection pooling constraints for Render's free tier.</strong></p>
+      </div>
+
+      <div class="reality-card glass reveal reveal-delay-2">
+        <div class="reality-card-header">
+          <span class="reality-icon">⚡</span>
+          <div>
+            <h3>Redis Not Available in Production</h3>
+            <span class="reality-error">Connection refused: 127.0.0.1:6379</span>
+          </div>
+        </div>
+        <div class="reality-arrow"><span>→ Root Cause</span></div>
+        <p class="reality-solution">Local Redis was hardcoded. Production requires an external Redis URL via environment variable. <strong>Fixed by centralizing all config behind environment variables and adding a RedisCloud URL to Render's environment dashboard.</strong></p>
+      </div>
+
+      <div class="reality-card glass reveal reveal-delay-1">
+        <div class="reality-card-header">
+          <span class="reality-icon">💳</span>
+          <div>
+            <h3>Stripe Webhook Signature Failure</h3>
+            <span class="reality-error">No signatures found matching expected</span>
+          </div>
+        </div>
+        <div class="reality-arrow"><span>→ Root Cause</span></div>
+        <p class="reality-solution">Flask was reading the request body as JSON before Stripe's signature verification, consuming the raw bytes needed. <strong>Fixed by using <code>request.get_data()</code> instead of <code>request.json</code> in the webhook handler.</strong></p>
+      </div>
+
+      <div class="reality-card glass reveal reveal-delay-2">
+        <div class="reality-card-header">
+          <span class="reality-icon">🌍</span>
+          <div>
+            <h3>Missing Environment Variables in Production</h3>
+            <span class="reality-error">KeyError: 'SECRET_KEY'</span>
+          </div>
+        </div>
+        <div class="reality-arrow"><span>→ Root Cause</span></div>
+        <p class="reality-solution">Local <code>.env</code> files don't ship with the code. <strong>Fixed by auditing all <code>os.environ.get()</code> calls, creating a config checklist, and using Render's environment variable dashboard.</strong></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ============================================================
+     LEARNING / GROWTH
+============================================================ -->
+<section id="learning" class="section" aria-label="Growth section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Growth</span>
+      <h2 class="section-title">Currently going<br><span>deeper, not wider</span></h2>
+      <p class="section-subtitle">
+        I don't collect frameworks. I invest in fundamentals that compound — the kind of knowledge that makes you a better engineer at any stack.
+      </p>
+    </div>
+
+    <div class="learning-grid">
+
+      <div class="learning-card glass reveal reveal-delay-1">
+        <span class="learning-icon">🗄️</span>
+        <h3>Advanced SQL</h3>
+        <p>Window functions, CTEs, query optimization, indexing strategies, and execution plan analysis. Understanding what the database is actually doing.</p>
+        <div class="learning-progress">
+          <div class="progress-bar"><div class="progress-bar-fill" style="width: 55%;"></div></div>
+          <span class="progress-label">Active</span>
+        </div>
+      </div>
+
+      <div class="learning-card glass reveal reveal-delay-2">
+        <span class="learning-icon">🏗️</span>
+        <h3>System Design</h3>
+        <p>Load balancing, caching layers, message queues, database sharding, CAP theorem. How to architect systems that survive real-world traffic.</p>
+        <div class="learning-progress">
+          <div class="progress-bar"><div class="progress-bar-fill" style="width: 42%;"></div></div>
+          <span class="progress-label">Active</span>
+        </div>
+      </div>
+
+      <div class="learning-card glass reveal reveal-delay-3">
+        <span class="learning-icon">📖</span>
+        <h3>DDIA</h3>
+        <p><em>Designing Data-Intensive Applications</em> — reading with focus. Storage engines, replication, consistency models. The canonical reference for serious backend engineers.</p>
+        <div class="learning-progress">
+          <div class="progress-bar"><div class="progress-bar-fill" style="width: 38%;"></div></div>
+          <span class="progress-label">In Progress</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="reveal" style="margin-top: 36px; padding: 28px 32px; border-radius: var(--radius-lg); background: rgba(139,92,246,0.06); border: 1px solid rgba(139,92,246,0.18); font-family: var(--font-mono); font-size: 13px; color: var(--text-secondary); line-height: 1.9;">
+      <span style="color: var(--purple-400);">// Engineering philosophy</span><br/>
+      <span style="color: var(--text-muted);">while</span> (alive) {<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--cyan-400);">read</span>(<span style="color: var(--green-400)">"fundamentals"</span>);<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--cyan-400);">build</span>(<span style="color: var(--green-400)">"real_systems"</span>);<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--cyan-400);">debug</span>(<span style="color: var(--green-400)">"production_issues"</span>);<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--cyan-400);">repeat</span>();<br/>
+      }
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ============================================================
+     CONTACT
+============================================================ -->
+<section id="contact" class="section" aria-label="Contact section">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="reveal">
+        <span class="section-label">Let's connect</span>
+        <h2 class="section-title" style="text-align:center;">
+          Should I be on your<br><span>engineering team?</span>
+        </h2>
+        <p class="section-subtitle" style="text-align:center; margin: 0 auto 0;">
+          If you're looking for a backend-focused full-stack developer who ships production-ready systems, debugs like a detective, and gets better every week — let's talk.
+        </p>
+      </div>
+
+      <div class="contact-links reveal reveal-delay-1">
+
+        <a href="https://linkedin.com/in/rohanmalve" target="_blank" rel="noopener noreferrer" class="contact-link glass" id="contact-linkedin">
+          <div class="contact-link-icon" style="background: rgba(10,102,194,0.15);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="contact-link-info">
+            <strong>LinkedIn</strong>
+            <span>linkedin.com/in/rohanmalve</span>
+          </div>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+
+        <a href="https://github.com/rohanmalve" target="_blank" rel="noopener noreferrer" class="contact-link glass" id="contact-github">
+          <div class="contact-link-icon" style="background: rgba(255,255,255,0.06);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#f1f5f9"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.990.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div class="contact-link-info">
+            <strong>GitHub</strong>
+            <span>github.com/rohanmalve</span>
+          </div>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+
+        <a href="mailto:rohanmalve@example.com" class="contact-link glass" id="contact-email">
+          <div class="contact-link-icon" style="background: rgba(139,92,246,0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-link-info">
+            <strong>Email</strong>
+            <span>rohanmalve@example.com</span>
+          </div>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+
+        <a href="https://stackoverflow.com/users/rohanmalve" target="_blank" rel="noopener noreferrer" class="contact-link glass" id="contact-stackoverflow">
+          <div class="contact-link-icon" style="background: rgba(244,128,36,0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#f48024"><path d="M15.725 0l-1.72 1.277 6.39 8.588 1.716-1.277L15.725 0zm-3.94 3.418l-1.369 1.644 8.225 6.85 1.369-1.644-8.225-6.85zm-3.15 4.465l-.905 1.94 9.702 4.517.904-1.94-9.701-4.517zm-1.85 4.86l-.44 2.093 10.473 2.201.44-2.092-10.473-2.203zM1.89 15.47V24h19.19v-8.53h-2.133v6.397H4.021v-6.396H1.89zm4.265 2.133v2.13h10.66v-2.13H6.154z"/></svg>
+          </div>
+          <div class="contact-link-info">
+            <strong>Stack Overflow</strong>
+            <span>stackoverflow.com/users/rohanmalve</span>
+          </div>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span>{ RM }</span> — Rohan Malve
+    </div>
+    <div class="footer-quote">
+      <em>"Building systems that work beyond localhost."</em>
+    </div>
+    <div class="footer-copy">
+      © 2024 · All systems operational
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
